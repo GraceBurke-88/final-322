@@ -7,7 +7,7 @@ const App = () => {
     return(
 
         <div className="container" style={{ marginTop: '15px' }}>
-            <h1>Banking</h1>
+            <h1>Banking items</h1>
             <div>
             <div className="row">
                 <h3>Account</h3>
