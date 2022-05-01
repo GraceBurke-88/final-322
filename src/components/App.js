@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AccountList from './AccountList';
+import TotalList from './TotalList'
 
 const App = () => {
 
@@ -10,16 +11,17 @@ const App = () => {
             <h1>Banking items</h1>
             <div>
             <div className="row">
-                <h3>Account</h3>
-                <AccountList/>
+                <AccountList title={"Accounts"} stateList={"players"} />
             </div>
             <div className="row">
-                <div className="col" style={{background:'#f2f2f2'}}><br/><h3>Balance</h3>
-                    { 'text' }</div>
-                <div className="col" style={{background:'lightgray'}}><br/><h3>Deposit</h3>
-                    { 'Text' } </div>
-                <div className="col" style={{background:'#f2f2f2'}}><br/><h3>Withdraw</h3>
-                    { 'Text' }</div>
+                <div className="col" style={{background:'#f2f2f2'}}>
+                    <AccountList title={"Balance"} stateList={"players"} />
+                </div>
+                <div className="col" style={{background:'lightgray'}}>
+                   <TotalList/> </div>
+                <div className="col" style={{background:'#f2f2f2'}}>
+                    <AccountList title={"Withdraw"} stateList={"enemies"} />
+                </div>
             </div>
             </div>
         </div>
