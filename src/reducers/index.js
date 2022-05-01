@@ -27,9 +27,9 @@ const sortAccounts = (state) => {
     };
 
     newState.accounts.forEach(account => {
-        if(account.type === 'player') {
+        if(account.type === 'player' || account.type === 'players' ) {
             newState.players.push(account);
-        } else if (account.type === 'enemy') {
+        } else if (account.type === 'enemy' || account.type === 'enemies') {
             newState.enemies.push(account);
         }
     });
@@ -45,9 +45,9 @@ const accountReducer = (state, action) => {
             player.id = state.accounts.length +1;
             state.accounts.push(player);
 
-            return sortAccounts(player);
+            return sortAccounts(state);
 
-        case 'REMOVE ACCOUNT':
+        case 'REMOVE_ACCOUNT':
             const accountIndex = state.accounts.findIndex(char => {
                 return char.id === action.payload;
             });

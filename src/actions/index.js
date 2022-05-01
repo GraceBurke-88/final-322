@@ -1,16 +1,16 @@
 
-export const addPlayer = (name, initiative, type) => {
+export const addAccount = (name, initiative, type) => {
     return {
-        type: 'ADD_PLAYER',
+        type: 'ADD_ACCOUNT',
         payload: {
             name, initiative, type
         }
     };
 };
 
-export const removePlayer = (playerId) => {
+export const removeAccount = (playerId) => {
     return {
-        type: 'REMOVE_PLAYER',
+        type: 'REMOVE_ACCOUNT',
         payload: playerId
     }
 };

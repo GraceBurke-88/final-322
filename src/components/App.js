@@ -3,10 +3,10 @@ import React from 'react';
 import AccountList from './AccountList';
 import TotalList from './TotalList'
 
+
 const App = () => {
 
     return(
-
         <div className="container" style={{ marginTop: '15px' }}>
             <h1>Banking items</h1>
             <div>
